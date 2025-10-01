@@ -1,0 +1,611 @@
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+.animate-pulse {
+    animation: pulse 2s infinite;
+}
+
+.animate-slide-in {
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Code snippet styling */
+#code-snippet {
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    overflow-y: auto;
+    border: 1px solid #4b5563;
+    border-radius: 4px;
+    max-height: 400px;
+    padding: 0.5rem;
+}
+
+/* Tooltip styling */
+.code-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.code-tooltip:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1e40af;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    width: 200px;
+    z-index: 10;
+}
+
+/* Chart styling */
+#power-chart,
+#simulation-chart {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid #4b5563;
+}
+
+/* Flatpickr styling */
+.flatpickr-input {
+    background-color: #f3f4f6;
+    border: 1px solid #4b5563;
+    border-radius: 4px;
+}
+
+/* Form warning styling */
+#form-warning,
+#signin-error {
+    transition: opacity 0.5s ease-out;
+    border: 1px solid #dc2626;
+    border-radius: 4px;
+}
+
+/* Simulation modal styling */
+#simulation-modal {
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    z-index: 50;
+}
+
+#simulation-modal>div {
+    background: linear-gradient(145deg, #1e3a8a, #60a5fa);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    max-width: 768px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+#simulation-data,
+#simulation-output,
+#profile-details {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1f2937;
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    padding: 0.75rem;
+    color: #e5e7eb;
+}
+
+/* Status Bar */
+#simulation-modal .flex.justify-between.items-center {
+    background-color: #111827;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #374151;
+    color: #e5e7eb;
+    font-size: 0.875rem;
+}
+
+/* Sidebar styling */
+#sim-sidebar {
+    background-color: #111827;
+    width: 200px;
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    border-right: 1px solid #374151;
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    transform: translateX(-100%);
+    pointer-events: auto;
+    /* Ensure clicks are registered */
+}
+
+#sim-sidebar.active {
+    transform: translateX(0);
+}
+
+#sim-sidebar ul {
+    padding: 0.5rem;
+}
+
+#sim-sidebar li button {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-align: left;
+    width: 100%;
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+    pointer-events: auto;
+    /* Ensure buttons are clickable */
+}
+
+#sim-sidebar li button:hover {
+    background-color: #2563eb;
+    transform: translateX(5px);
+}
+
+#sim-sidebar li button.active {
+    background-color: #3b82f6;
+    font-weight: bold;
+}
+
+#sim-sidebar .p-4.border-b {
+    background-color: #111827;
+    border-bottom: 1px solid #374151;
+}
+
+/* Hamburger button */
+#sim-hamburger {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+    z-index: 70;
+    pointer-events: auto;
+    /* Ensure hamburger button is clickable */
+}
+
+/* Horizontal nav styling */
+#sim-nav {
+    background-color: #111827;
+    border-bottom: 1px solid #374151;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+#sim-nav .tab-btn {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    padding: 0.5rem 1rem;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    pointer-events: auto;
+    /* Ensure buttons are clickable */
+}
+
+#sim-nav .tab-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+#sim-nav .tab-btn.active {
+    background-color: #3b82f6;
+    border-color: #1e3a8a;
+    font-weight: bold;
+}
+
+/* Profile menu styling */
+#profile-menu {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 6px;
+}
+
+#profile-menu.active {
+    display: block;
+}
+
+#profile-menu button {
+    color: #e5e7eb;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+#profile-menu button:hover {
+    background-color: #2563eb;
+}
+
+/* Simulation content views */
+#simulation-app .view {
+    background-color: #1f2937;
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    color: #e5e7eb;
+}
+
+#simulation-app .view h3 {
+    color: #ffffff;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#simulation-app .view button,
+#simulation-app .view select {
+    background-color: #2563eb;
+    color: #ffffff;
+    border: 1px solid #1e40af;
+    border-radius: 6px;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease;
+}
+
+#simulation-app .view button:hover,
+#simulation-app .view select:hover {
+    background-color: #1e40af;
+}
+
+#simulation-app .view select {
+    background-color: #374151;
+    color: #e5e7eb;
+}
+
+/* Dashboard stats */
+#dashboard-stats {
+    gap: 0.75rem;
+}
+
+#dashboard-stats>div {
+    background-color: #111827;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    padding: 0.75rem;
+}
+
+/* Simulation chart */
+#simulation-chart {
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #4b5563;
+}
+
+/* Sign-in screen */
+#simulation-signin {
+    background-color: #1f2937;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+#simulation-signin input,
+#simulation-signin button {
+    background-color: #374151;
+    color: #e5e7eb;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease;
+}
+
+#simulation-signin input:focus,
+#simulation-signin button:hover {
+    background-color: #2563eb;
+    border-color: #1e40af;
+}
+
+#simulation-signin h2 {
+    color: #ffffff;
+}
+
+/* Close button */
+#simulation-close {
+    background-color: #374151;
+    color: #e5e7eb;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    transition: background-color 0.2s ease;
+}
+
+#simulation-close:hover {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+/* Navigation tabs */
+.tab-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: 1px solid #4b5563;
+    border-radius: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background-color: #1e3a8a;
+        padding: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+    }
+
+    nav ul>li {
+        margin-top: 1rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #sim-sidebar {
+        width: 180px;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    #sim-sidebar li button {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #code-snippet {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 640px) {
+    #simulation-modal {
+        padding: 0.5rem;
+    }
+
+    #simulation-modal>div {
+        max-width: 320px;
+        height: 568px;
+    }
+
+    #code-snippet {
+        font-size: 0.65rem;
+        max-height: 300px;
+        padding: 0.5rem;
+    }
+
+    #power-chart {
+        height: 200px;
+    }
+
+    #simulation-chart {
+        height: 100px;
+    }
+
+    #simulation-data,
+    #simulation-output,
+    #simulation-history,
+    #profile-details,
+    #dashboard-stats {
+        font-size: 0.65rem;
+        padding: 0.5rem;
+    }
+
+    #simulation-app .view h3 {
+        font-size: 0.75rem;
+    }
+
+    #simulation-app .view button,
+    #simulation-app .view select {
+        font-size: 0.65rem;
+        padding: 0.4rem;
+    }
+
+    #simulation-signin input,
+    #simulation-signin button {
+        font-size: 0.65rem;
+        padding: 0.5rem;
+    }
+
+    #simulation-signin h2 {
+        font-size: 1.25rem;
+    }
+
+    #sim-sidebar {
+        width: 160px;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    #sim-sidebar li button {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.7rem;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    #simulation-modal {
+        padding: 0.75rem;
+    }
+
+    #simulation-modal>div {
+        max-width: 768px;
+        height: 600px;
+    }
+
+    #code-snippet {
+        font-size: 0.75rem;
+        max-height: 350px;
+        padding: 0.75rem;
+    }
+
+    #power-chart {
+        height: 250px;
+    }
+
+    #simulation-chart {
+        height: 120px;
+    }
+
+    #simulation-data,
+    #simulation-output,
+    #simulation-history,
+    #profile-details,
+    #dashboard-stats {
+        font-size: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    #simulation-app .view h3 {
+        font-size: 0.875rem;
+    }
+
+    #simulation-app .view button,
+    #simulation-app .view select {
+        font-size: 0.75rem;
+        padding: 0.6rem;
+    }
+
+    #simulation-signin input,
+    #simulation-signin button {
+        font-size: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    #simulation-signin h2 {
+        font-size: 1.5rem;
+    }
+
+    #sim-sidebar {
+        width: 180px;
+        height: 100%;
+        max-height: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    #code-snippet {
+        font-size: 0.8rem;
+        max-height: 400px;
+        padding: 1rem;
+    }
+
+    #power-chart {
+        height: 300px;
+    }
+
+    #simulation-chart {
+        height: 140px;
+    }
+
+    #simulation-data,
+    #simulation-output,
+    #simulation-history,
+    #profile-details,
+    #dashboard-stats {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+
+    #simulation-app .view h3 {
+        font-size: 1rem;
+    }
+
+    #simulation-app .view button,
+    #simulation-app .view select {
+        font-size: 0.8rem;
+        padding: 0.75rem;
+    }
+
+    #simulation-signin input,
+    #simulation-signin button {
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+
+    #simulation-signin h2 {
+        font-size: 1.75rem;
+    }
+}

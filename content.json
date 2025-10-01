@@ -1,0 +1,78 @@
+{
+    "features": [
+        {
+            "title": "Shared Power Management",
+            "description": "Accurately tracks electricity usage in shared environments like hostels, flats, and offices, preventing unfair billing.",
+            "overview": "Wattrix ensures everyone pays their fair share by tracking exactly how much electricity each person or device uses in shared spaces like hostels or offices. No more arguments over who left the lights on!"
+        },
+        {
+            "title": "Real-Time Monitoring",
+            "description": "Shows live data on voltage, current, power, and energy consumed, helping users stay informed.",
+            "overview": "With Wattrix, you can see how much power your devices are using right now, like checking your phone to see live updates on electricity usage."
+        },
+        {
+            "title": "Smart Billing & Power Split",
+            "description": "Calculates individual usage for fair billing, supporting both prepaid and postpaid logic.",
+            "overview": "Wattrix splits the electricity bill fairly by calculating who used what, whether you pay before (prepaid) or after (postpaid) using the power."
+        },
+        {
+            "title": "Usage History and Reports",
+            "description": "Logs daily, weekly, and monthly usage for budgeting and analysis.",
+            "overview": "Wattrix keeps a record of your power usage over days, weeks, or months, so you can plan your budget and spot ways to save."
+        },
+        {
+            "title": "Remote Monitoring & Alerts",
+            "description": "Notifies users of unusual activity and supports remote switching of appliances.",
+            "overview": "Wattrix can send you alerts if something’s using too much power and even let you turn devices on or off from your phone."
+        },
+        {
+            "title": "Energy Efficiency",
+            "description": "Encourages reduced wastage and lower bills through conscious usage.",
+            "overview": "By showing you exactly how much power you use, Wattrix helps you cut waste and save money on your electricity bills."
+        }
+    ],
+    "technical": [
+        {
+            "title": "Custom Hardware",
+            "description": "Microcontroller-based system (e.g., ESP32) with current and voltage sensors for real-time electrical parameter tracking.",
+            "overview": "Wattrix uses a tiny computer chip and sensors to measure electricity usage instantly."
+        },
+        {
+            "title": "Smart Metering",
+            "description": "Uses shunt resistors or CT sensors to calculate and log usage per user or device.",
+            "overview": "Special tools in Wattrix track how much power each person or device uses and keep a record."
+        },
+        {
+            "title": "IoT Connectivity",
+            "description": "Transmits data via Wi-Fi, GSM, or LoRa to a cloud server or local dashboard.",
+            "overview": "Wattrix sends power usage info to your phone or computer using the internet."
+        },
+        {
+            "title": "Software Interface",
+            "description": "Web/app interface with live charts, cost tracking, alerts, and custom sharing formulas.",
+            "overview": "You can see your power usage on an app or website with easy charts and get alerts if something’s wrong."
+        }
+    ],
+    "useCases": [
+        {
+            "title": "Eliminates Guesswork",
+            "description": "Replaces manual estimation with accurate, automated power tracking.",
+            "overview": "No more guessing who used more power—Wattrix tracks it automatically and shows the exact usage."
+        },
+        {
+            "title": "Resolves Billing Disputes",
+            "description": "Provides clear data to prevent arguments over usage in shared setups.",
+            "overview": "Wattrix stops fights over bills by showing exactly who used how much electricity."
+        },
+        {
+            "title": "Transparent Generator Sharing",
+            "description": "Ensures visibility of power usage for all parties involved.",
+            "overview": "When sharing a generator, Wattrix makes sure everyone can see how much power they’re using."
+        },
+        {
+            "title": "Real-Time Feedback",
+            "description": "Unlike traditional meters, Wattrix shows live usage data instantly.",
+            "overview": "Wattrix gives you instant updates on your power usage, not just a bill at the end of the month."
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "username": "demo",
+            "password": "wattrix2025",
+            "email": "demo@wattrix.com"
+        },
+        {
+            "username": "user_1",
+            "password": "pass123",
+            "email": "user1@wattrix.com"
+        },
+        {
+            "username": "user_2",
+            "password": "pass456",
+            "email": "user2@wattrix.com"
+        }
+    ]
+}
